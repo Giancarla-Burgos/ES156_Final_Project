@@ -42,7 +42,7 @@ The technical reason OFDM is attractive is that the discrete Fourier transform (
 The contribution is a compact, reproducible acoustic-OFDM testbed that makes the cyclic-prefix condition experimentally visible. The same code connects convolution, DFT diagonalization, cyclic prefixes, training-based channel estimation, and one-tap equalization. The experiments then measure when the circular-convolution model becomes accurate, show the cyclic-prefix length needed for one-tap equalization, quantify the robustness/rate tradeoff, and demonstrate the same receiver structure in a synchronized real-valued audio packet.
 
 \subsection{Related Work}
-The mathematical foundation follows standard signals-and-systems and digital-communication models for LTI convolution, impulse responses, Fourier analysis, PAM pulse shaping, matched filtering, detection, and ISI \cite{oppenheim1997,chaparro2019,proakis2008,kay1998}. The multicarrier extension follows the DFT-based OFDM idea of Weinstein and Ebert \cite{weinstein1971}, later surveyed by Bingham \cite{bingham1990}, and standard treatments of cyclic prefixes, frequency-domain equalization, and rate/robustness tradeoffs \cite{nee2000,tse2005}. The synchronization step is related to repeated-preamble OFDM timing methods such as Schmidl and Cox \cite{schmidl1997}. 
+The mathematical foundation follows standard signals-and-systems and digital-communication models for LTI convolution, impulse responses, Fourier analysis, PAM pulse shaping, matched filtering, detection, and ISI \cite{oppenheim1997,proakis2008}. The multicarrier extension follows the DFT-based OFDM idea of Weinstein and Ebert \cite{weinstein1971}, later surveyed by Bingham \cite{bingham1990}, and standard treatments of cyclic prefixes, frequency-domain equalization, and rate/robustness tradeoffs \cite{nee2000}. The synchronization step is related to repeated-preamble OFDM timing methods such as Schmidl and Cox \cite{schmidl1997}. 
 
 Beyond textbook OFDM, this project is motivated by acoustic links where multipath and limited bandwidth make equalization central. Stojanovic's underwater OFDM work studies adaptive synchronization and sparse channel estimation for shallow-water acoustic links, highlighting Doppler, frequency selectivity, and long multipath as practical challenges \cite{stojanovic2008}. More recent underwater work emphasizes exactly the cyclic-prefix issue studied here: CP-OFDM resists multipath, but an overly long prefix wastes scarce bandwidth and energy \cite{feng2023}. Airborne speaker-microphone systems provide a closer hardware analogue. Matsuoka, Nakashima, and Yoshimura describe a mobile-terminal acoustic communication system that uses an ``Acoustic OFDM'' method to embed data in speech or music and transmit it from a loudspeaker to a microphone \cite{matsuoka2006}. Tabak, Lin, and Singer explicitly connect indoor near-ultrasonic consumer-device channels to underwater acoustic communication and use coherent equalization for high-rate acoustic links \cite{tabak2021}. Dolphin shows that off-the-shelf smartphones can support practical speaker-microphone data links and uses OFDM to address multipath, noise, and hardware frequency selectivity \cite{wang2016}. Unlike these more complete acoustic communication systems, this project isolates one mechanism: the cyclic-prefix length at which a finite acoustic channel becomes approximately circular over the FFT window. The experiments therefore emphasize model error, BER, and rate-overhead measurements rather than optimizing a complete acoustic modem with mobility, Doppler correction, coding, or real-room calibration.
 
@@ -351,14 +351,8 @@ Thus, the main BER curves, cyclic-prefix sweep, constellation plots, channel plo
 \bibitem{oppenheim1997}
 A.~V. Oppenheim, A.~S. Willsky, and S.~H. Nawab, \emph{Signals and Systems}, 2nd~ed. Upper Saddle River, NJ, USA: Prentice Hall, 1997.
 
-\bibitem{chaparro2019}
-L.~F. Chaparro and A.~Akan, \emph{Signals and Systems Using MATLAB}, 3rd~ed. London, U.K.: Academic Press, 2019.
-
 \bibitem{proakis2008}
 J.~G. Proakis and M.~Salehi, \emph{Digital Communications}, 5th~ed. New York, NY, USA: McGraw-Hill, 2008.
-
-\bibitem{kay1998}
-S.~M. Kay, \emph{Fundamentals of Statistical Signal Processing, Volume II: Detection Theory}. Upper Saddle River, NJ, USA: Prentice Hall, 1998.
 
 \bibitem{weinstein1971}
 S.~B. Weinstein and P.~M. Ebert, ``Data transmission by frequency-division multiplexing using the discrete Fourier transform,'' \emph{IEEE Transactions on Communication Technology}, vol.~19, no.~5, pp.~628--634, 1971.
@@ -368,9 +362,6 @@ J.~A.~C. Bingham, ``Multicarrier modulation for data transmission: An idea whose
 
 \bibitem{nee2000}
 R.~van Nee and R.~Prasad, \emph{OFDM for Wireless Multimedia Communications}. Boston, MA, USA: Artech House, 2000.
-
-\bibitem{tse2005}
-D.~Tse and P.~Viswanath, \emph{Fundamentals of Wireless Communication}. Cambridge, U.K.: Cambridge University Press, 2005.
 
 \bibitem{schmidl1997}
 T.~M. Schmidl and D.~C. Cox, ``Robust frequency and timing synchronization for OFDM,'' \emph{IEEE Transactions on Communications}, vol.~45, no.~12, pp.~1613--1621, 1997.
