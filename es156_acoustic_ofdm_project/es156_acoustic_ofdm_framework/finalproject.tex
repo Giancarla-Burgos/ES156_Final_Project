@@ -6,8 +6,10 @@
 \usepackage{cite}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{xurl}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
+\usepackage[hidelinks]{hyperref}
 
 \graphicspath{{figures/}}
 
@@ -328,10 +330,10 @@ The project is intentionally narrower than a full underwater or commodity-device
 
 \section*{Code Availability}
 All code for the synthetic experiments and audio demonstrations is organized as a small Python project and is available in the GitHub repository
-\begin{center}
-\url{https://github.com/Giancarla-Burgos/ES156_Final_Project}
-\end{center}
+\href{https://github.com/Giancarla-Burgos/ES156_Final_Project}{Giancarla-Burgos/ES156\_Final\_Project}.
+
 The repository README lists the Python dependencies, the fixed random-number settings used to make the simulations reproducible, the purpose of each script, the expected output folders, and the commands needed to regenerate the figures and CSV summaries. The main reproducibility commands are
+
 \begingroup\scriptsize\begin{verbatim}
 python3 scripts/run_experiments.py
 python3 scripts/run_audio_loopback_demo.py
