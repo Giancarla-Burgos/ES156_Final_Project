@@ -2,9 +2,11 @@
 
 Project title:
 
-**A Sonar-Inspired Acoustic OFDM Testbed for Packet Recovery in Dispersive Multipath Channels**
+**A Sonar-Inspired Acoustic OFDM Testbed for Reproducible Multipath Packet-Recovery Experiments**
 
-This project implements a reproducible ES156 final project around a central question: when can cyclic-prefix OFDM turn a dispersive acoustic channel into independent FFT subchannels, and what rate/robustness tradeoff does that require? It connects convolution, sampling, modulation, matched filtering, FFTs, cyclic prefixes, frequency-domain equalization, and preamble-based audio packet synchronization. The framing is sonar-inspired, but the included experiments are intentionally a simplified terrestrial acoustic testbed rather than a claim of underwater deployment.
+This project implements a reproducible ES156 final project around a central question: when can cyclic-prefix OFDM turn a dispersive acoustic channel into independent FFT subchannels, and what rate/robustness tradeoff does that require?
+
+The project connects convolution, sampling, modulation, matched filtering, FFTs, cyclic prefixes, frequency-domain equalization, and preamble-based audio packet synchronization. The framing is sonar-inspired, but the included experiments are intentionally a simplified terrestrial/simulated acoustic testbed rather than a claim of underwater deployment or a deployment-grade modem.
 
 ## Paper focus
 
@@ -18,7 +20,7 @@ The key evidence is:
 - a CP-length BER sweep showing the delay-spread versus overhead tradeoff;
 - Monte Carlo BER curves comparing CP-OFDM, OFDM without CP, OFDM without equalization, and single-carrier matched filtering;
 - constellation plots showing how one-tap equalization reverses subcarrier-specific attenuation and rotation;
-- a real-valued WAV packet demo with preamble synchronization and training-symbol channel estimation.
+- a simulated real-valued WAV packet demo with preamble synchronization and training-symbol channel estimation.
 
 ## Quick start
 
@@ -48,7 +50,7 @@ The scripts write:
 2. Single-carrier PAM matched filtering in AWGN and in a multipath channel.
 3. Monte Carlo BER comparison across SNR.
 4. Cyclic-prefix-length sweep showing the transition near the channel memory `L-1` and the throughput cost of extra prefix samples.
-5. Real-valued Hermitian OFDM WAV packet with preamble correlation and one-symbol channel estimation.
+5. Real-valued Hermitian OFDM WAV packet with simulated loopback, preamble correlation, and one-symbol channel estimation.
 6. Optional passband loopback centered near 8 kHz.
 
 ## Suggested extensions / limitations
@@ -72,12 +74,6 @@ The scripts write:
 - `src/acoustic_ofdm/ofdm_utils.py`: core signal-processing utilities.
 - `src/acoustic_ofdm/audio_utils.py`: real-valued audio packet utilities.
 
-## Related-work emphasis added to the paper
+## Related-work context
 
-The revised related-work paragraph now connects the project to:
-
-- classic OFDM and synchronization references;
-- underwater/sonar-inspired OFDM work on long multipath, Doppler, sparse channel estimation, and cyclic-prefix overhead;
-- airborne speaker-microphone systems such as Acoustic OFDM, near-ultrasonic consumer-device communication, and Dolphin.
-
-This is meant to improve the rubric category for conference/related work while keeping the implementation unchanged.
+The paper connects the project to classic OFDM and synchronization references; underwater/sonar-inspired OFDM work on long multipath, Doppler, sparse channel estimation, and cyclic-prefix overhead; and airborne speaker-microphone systems such as Acoustic OFDM, near-ultrasonic consumer-device communication, and Dolphin.
