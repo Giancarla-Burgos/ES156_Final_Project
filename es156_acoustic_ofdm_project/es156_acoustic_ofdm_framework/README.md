@@ -40,7 +40,7 @@ The scripts write:
 - `results/ber_summary_mc.csv` with 20-trial Monte Carlo BER means, standard errors, and 95% confidence intervals
 - `results/cp_length_sweep.csv` with BER versus cyclic-prefix length at 18 dB SNR
 - `results/decoded_message.txt` with a decoded text-message demo
-- `results/audio_loopback_summary.txt` with the Hermitian real-audio OFDM packet output
+- `results/audio_loopback_summary.txt` with the  simulated Hermitian real-audio OFDM packet output
 - `results/passband_audio_demo.txt` with the passband audio loopback output
 - `audio/tx_packet.wav`, `audio/rx_loopback.wav`, and `audio/rx_loopback_simulated.wav`
 
