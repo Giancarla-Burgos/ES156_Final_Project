@@ -1,0 +1,7 @@
+Passband audio OFDM synthetic loopback
+Carrier frequency: 8000.0 Hz
+Sample rate: 44100 Hz
+Original message: ES156 PASSBAND AUDIO OFDM LOOPBACK
+Decoded message:  ES156 PASSBAND AUDIO OFDM LOOPBACK
+BER: 0
+Limitation: packet timing is assumed known; add correlation-based synchronization for a true speaker/microphone test.

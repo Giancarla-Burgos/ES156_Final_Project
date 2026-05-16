@@ -1,0 +1,4 @@
+Original: ES156 audio OFDM: the FFT diagonalizes a cyclic convolution.
+Decoded:  ES156 audio OFDM: the FFT diagonalizes a cyclic convolution.
+Packet metadata: {'payload_bits': 480, 'data_blocks': 11, 'pad_bits': 43, 'duration_s': 0.5866666666666667}
+Decoder diagnostics: {'start': 12008, 'corr_peak': 0.9413475768546616, 'estimated_payload_bits': 480, 'decoded_blocks': 11, 'channel_mag_median': 0.132048601205525, 'channel_mag_min': 0.0731489986824227}

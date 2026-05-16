@@ -1,0 +1,7 @@
+Original message:
+ES156 OFDM DEMO: FFT EQUALIZATION CAN UNDO A MULTIPATH CHANNEL.
+
+Decoded message after synthetic multipath channel at 28 dB SNR:
+ES156 OFDM DEMO: FFT EQUALIZATION CAN UNDO A MULTIPATH CHANNEL.
+
+Bit error rate: 0
